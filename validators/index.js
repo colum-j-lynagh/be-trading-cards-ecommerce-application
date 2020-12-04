@@ -13,4 +13,5 @@ exports.userSignUpValidator = (req, res) => {
     const firstError = errors.map((errors) => errors.msg)[0];
     return res.status(400).json({ err: firstError });
   }
+  next();
 };
