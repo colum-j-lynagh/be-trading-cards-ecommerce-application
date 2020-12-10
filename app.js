@@ -6,7 +6,7 @@ const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 const expressValidator = require('express-validator');
 //import routes
-const userRouters = require('./routes/userRoutes');
+const authRouters = require('./routes/authRoutes');
 
 //app
 const app = express();
@@ -32,7 +32,7 @@ app.use(cookieParser());
 app.use(expressValidator());
 
 //routes middleware
-app.use('/api', userRouters);
+app.use('/api', authRouters);
 
 app.listen(PORT, () => {
   console.log(`Listening on Port ${PORT}`);
