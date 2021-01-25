@@ -36,6 +36,7 @@ app.use(expressValidator());
 //routes middleware
 app.use('/api', authRoutes);
 app.use('/api', userRoutes);
+app.use('/api', brandRoutes);
 
 app.listen(PORT, () => {
   console.log(`Listening on Port ${PORT}`);
