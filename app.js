@@ -9,6 +9,7 @@ const expressValidator = require('express-validator');
 const authRoutes = require('./routes/authRoutes');
 const userRoutes = require('./routes/userRoutes');
 const brandRoutes = require('./routes/brandRoutes');
+const productRoutes = require('./routes/productRoutes');
 
 //app
 const app = express();
@@ -37,6 +38,7 @@ app.use(expressValidator());
 app.use('/api', authRoutes);
 app.use('/api', userRoutes);
 app.use('/api', brandRoutes);
+app.use('/api', productRoutes);
 
 app.listen(PORT, () => {
   console.log(`Listening on Port ${PORT}`);
