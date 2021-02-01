@@ -9,7 +9,7 @@ exports.create = (req, res) => {
   form.keepExtensions = true;
   form.parse(req, (err, fields, files) => {
     if (err) {
-      return res.statis(400).json({
+      return res.status(400).json({
         error: 'Image was unable to be uploaded',
       });
     }
